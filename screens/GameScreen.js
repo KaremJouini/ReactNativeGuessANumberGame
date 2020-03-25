@@ -10,6 +10,7 @@ import {
   Alert
 } from "react-native";
 
+import { ScreenOrientation } from "expo";
 import NumberContainer from "../components/NumberContainer";
 import Card from "../components/Card";
 
@@ -26,6 +27,9 @@ const generate = (min, max, exclude) => {
 };
 
 const GameScreen = props => {
+  //Manage screen's orientation
+  //ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT);
+
   const [currentGuess, setCurrentGuess] = useState(
     generate(1, 100, props.userChoice)
   );

@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView //TO MAKE SURE THAT THE STYLE ADAPTS TO THE DEVICE
+} from "react-native";
 import * as Font from "expo-font";
 //Prolong the loading screen until a task is done
 import { AppLoading } from "expo";
@@ -7,7 +12,7 @@ import Header from "./components/Header";
 import StartGameScreen from "./screens/StartGameScreen";
 import GameScreen from "./screens/GameScreen";
 import GameOverScreen from "./screens/GameOverScreen";
-import {} from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 
 const fetchFonts = () => {
   return Font.loadAsync({
